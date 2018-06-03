@@ -1,4 +1,4 @@
-"""dportfolio URL Configuration
+"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -20,7 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-
 # Use include() to add paths from the catalog application
 from django.conf.urls import include
 from django.urls import path
@@ -28,6 +27,7 @@ from django.urls import path
 urlpatterns += [
     path('portfolio/', include('portfolio.urls')),
 ]
+
 
 #Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
